@@ -341,7 +341,7 @@ function renderScreen(args: {
   if (screen.kind === "loading") {
     return (
       <Box borderStyle="round" paddingX={2} paddingY={1}>
-        <Text>Loading term-chess…</Text>
+        <Text>Loading shellchess…</Text>
       </Box>
     );
   }
@@ -504,5 +504,5 @@ function renderScreen(args: {
 }
 
 function isDevBoardMode(): boolean {
-  return process.argv.includes("--dev-board") || process.env.TCHESS_DEV_BOARD === "1";
+  return process.argv.includes("--dev-board") || process.env.SHELLCHESS_DEV_BOARD === "1";
 }

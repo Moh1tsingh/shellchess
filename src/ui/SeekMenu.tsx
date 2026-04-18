@@ -24,7 +24,7 @@ export function SeekMenu(props: SeekMenuProps): React.ReactElement {
 
   return (
     <Box flexDirection="column" borderStyle="round" paddingX={2} paddingY={1}>
-      <Text bold>term-chess — seek a game on Lichess</Text>
+      <Text bold>shellchess — seek a game on Lichess</Text>
       {props.username && <Text dimColor>Signed in as {props.username}</Text>}
       <Box marginTop={1} flexDirection="column">
         <Text bold>Time control:</Text>

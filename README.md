@@ -1,13 +1,13 @@
-# term-chess
+# shellchess
 
 Keyboard-driven TUI chess client for Lichess, built with Ink and `chess.js`.
 
-`term-chess` is a terminal-first client for seeking and playing real games on Lichess without leaving your shell.
+`shellchess` is a terminal-first client for seeking and playing real games on Lichess without leaving your shell.
 
 ## Features
 
 - Board-first terminal layout that adapts to terminal resizing
-- Lichess OAuth token setup with local config storage in `~/.term-chess/config.json`
+- Lichess OAuth token setup with local config storage in `~/.shellchess/config.json`
 - Real-time board and clock sync from the Lichess Board API
 - Keyboard navigation for piece selection and moves
 - Promotion picker, resign, and draw offer actions
@@ -22,33 +22,33 @@ Keyboard-driven TUI chess client for Lichess, built with Ink and `chess.js`.
 Published package name:
 
 ```bash
-term-chess
+shellchess
 ```
 
 Install globally:
 
 ```bash
-npm install -g term-chess
+npm install -g shellchess
 ```
 
 Then run:
 
 ```bash
-term-chess
+shellchess
 ```
 
 You can also run it without a global install:
 
 ```bash
-npx term-chess
+npx shellchess
 ```
 
 ## First Run
 
-On first launch, `term-chess` asks for a Lichess token and stores it at:
+On first launch, `shellchess` asks for a Lichess token and stores it at:
 
 ```text
-~/.term-chess/config.json
+~/.shellchess/config.json
 ```
 
 The file is written with `0600` permissions.
@@ -56,12 +56,12 @@ The file is written with `0600` permissions.
 Create a token with:
 
 - Scope: `board:play`
-- Description: `term-chess`
+- Description: `shellchess`
 
 ## Usage
 
 ```bash
-term-chess
+shellchess
 ```
 
 Current live matchmaking support is limited to the time controls accepted by the Lichess Board API matchmaking flow.
@@ -125,4 +125,4 @@ Dev board shortcuts:
 
 ## Notes
 
-- The terminal font matters. Some fonts render filled Unicode black chess pieces poorly, so `term-chess` uses a stable glyph rendering strategy tuned for terminal compatibility.
+- The terminal font matters. Some fonts render filled Unicode black chess pieces poorly, so `shellchess` uses a stable glyph rendering strategy tuned for terminal compatibility.

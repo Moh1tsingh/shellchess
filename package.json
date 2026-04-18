@@ -1,25 +1,23 @@
 {
-  "name": "term-chess",
+  "name": "shellchess",
   "version": "0.1.0",
   "description": "Play Lichess from your terminal",
   "license": "MIT",
   "type": "module",
-  "homepage": "https://github.com/Moh1tsingh/tchess#readme",
+  "homepage": "https://github.com/Moh1tsingh/shellchess#readme",
   "bugs": {
-    "url": "https://github.com/Moh1tsingh/tchess/issues"
+    "url": "https://github.com/Moh1tsingh/shellchess/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Moh1tsingh/tchess.git"
+    "url": "git+https://github.com/Moh1tsingh/shellchess.git"
   },
   "files": [
     "dist",
     "README.md",
     "LICENSE"
   ],
-  "bin": {
-    "term-chess": "./dist/index.js"
-  },
+  "bin": "dist/index.js",
   "scripts": {
     "dev": "tsx src/index.tsx",
     "dev:board": "tsx src/index.tsx --dev-board",
