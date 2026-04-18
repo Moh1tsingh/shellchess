@@ -341,7 +341,7 @@ function renderScreen(args: {
   if (screen.kind === "loading") {
     return (
       <Box borderStyle="round" paddingX={2} paddingY={1}>
-        <Text>Loading tchess…</Text>
+        <Text>Loading term-chess…</Text>
       </Box>
     );
   }

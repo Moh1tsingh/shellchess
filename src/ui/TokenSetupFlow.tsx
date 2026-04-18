@@ -7,7 +7,7 @@ interface TokenSetupFlowProps {
 }
 
 const TOKEN_URL =
-  "https://lichess.org/account/oauth/token/create?scopes=board:play&description=tchess";
+  "https://lichess.org/account/oauth/token/create?scopes=board:play&description=term-chess";
 
 export function TokenSetupFlow(props: TokenSetupFlowProps): React.ReactElement {
   const [input, setInput] = useState("");
@@ -30,7 +30,7 @@ export function TokenSetupFlow(props: TokenSetupFlowProps): React.ReactElement {
 
   return (
     <Box flexDirection="column" borderStyle="round" paddingX={2} paddingY={1}>
-      <Text bold>Welcome to tchess</Text>
+      <Text bold>Welcome to term-chess</Text>
       <Box marginTop={1} flexDirection="column">
         <Text>To play real games on Lichess you need a personal API token.</Text>
         <Box marginTop={1} flexDirection="column">

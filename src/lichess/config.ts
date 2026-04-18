@@ -6,17 +6,34 @@ export interface TchessConfig {
   token: string;
 }
 
-export function configDir(): string {
+function legacyConfigDir(): string {
   return join(homedir(), ".tchess");
+}
+
+export function configDir(): string {
+  return join(homedir(), ".term-chess");
 }
 
 export function configPath(): string {
   return join(configDir(), "config.json");
 }
 
+function legacyConfigPath(): string {
+  return join(legacyConfigDir(), "config.json");
+}
+
 export async function loadConfig(): Promise<TchessConfig | null> {
   try {
     const raw = await readFile(configPath(), "utf8");
+    const parsed = JSON.parse(raw) as Partial<TchessConfig>;
+    if (!parsed.token || typeof parsed.token !== "string") return null;
+    return { token: parsed.token };
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+  }
+
+  try {
+    const raw = await readFile(legacyConfigPath(), "utf8");
     const parsed = JSON.parse(raw) as Partial<TchessConfig>;
     if (!parsed.token || typeof parsed.token !== "string") return null;
     return { token: parsed.token };

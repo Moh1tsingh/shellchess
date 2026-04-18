@@ -18,7 +18,7 @@
     "LICENSE"
   ],
   "bin": {
-    "tchess": "./dist/index.js"
+    "term-chess": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.tsx",

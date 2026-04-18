@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "tchess",
+      "name": "term-chess",
       "dependencies": {
         "chess.js": "^1.0.0",
         "ctx-switch": "^2.0.7",

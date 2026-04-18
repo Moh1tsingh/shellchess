@@ -121,6 +121,8 @@ const DEV_PRESETS: DevPreset[] = [
   },
 ];
 
+const DEFAULT_PRESET_INDEX = 2;
+
 function cloneState(state: GameStateEvent): GameStateEvent {
   return { ...state };
 }
@@ -187,7 +189,7 @@ function finishedStateFor(game: Game, mover: "w" | "b"): {
 }
 
 export function DevBoard(): React.ReactElement {
-  const [state, setState] = useState(() => loadPresetState(0));
+  const [state, setState] = useState(() => loadPresetState(DEFAULT_PRESET_INDEX));
 
   const reset = (presetIndex = state.presetIndex, myColor = state.myColor) => {
     setState(loadPresetState(presetIndex, myColor));
